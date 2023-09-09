@@ -12,4 +12,10 @@ Try it out in qemu after build with qemu:
 qemu-system-x86_64 -kernel arch/x86/boot/bzImage
 ```
 
+(or with the release file...)
+
+```
+qemu-system-x86_64 -kernel dumb-kernel.vmlinuz
+```
+
 ![screenshot with the panic](./screenshot.png)
