@@ -1,0 +1,38 @@
+*** linux-5.10.194-original/init/main.c	2023-09-02 00:18:14.000000000 -0700
+--- linux-5.10.194/init/main.c	2023-09-09 10:46:39.809965130 -0700
+***************
+*** 111,112 ****
+--- 111,113 ----
+  static int kernel_init(void *);
++ void dennis_nedry_sys_lockout_routine(void);
+  
+*************** void __weak free_initmem(void)
+*** 1395,1396 ****
+--- 1396,1415 ----
+  
++ 
++ void __weak dennis_nedry_sys_lockout_routine()
++ {
++ 	pr_err("\n\nVersion 4.0.5, Alpha E");
++ 
++ 	pr_err("access: PERMISSION DENIED");
++ 	pr_err("YOU DIDN'T SAY THE MAGIC WORD!");
++ 	pr_err("YOU DIDN'T SAY THE MAGIC WORD!");
++ 	pr_err("YOU DIDN'T SAY THE MAGIC WORD!");
++ 	pr_err("YOU DIDN'T SAY THE MAGIC WORD!");
++ 	pr_err("YOU DIDN'T SAY THE MAGIC WORD!");
++ 	pr_err("\n");
++ 
++ 	dump_stack();
++ 	pr_err("\n");
++ 	panic("Uh uh uh! YOU DIDN'T SAY THE MAGIC WORD!");
++ }
++ 
+  static int __ref kernel_init(void *unused)
+*************** static int __ref kernel_init(void *unuse
+*** 1408,1409 ****
+--- 1427,1430 ----
+  
++ 	dennis_nedry_sys_lockout_routine();
++ 
+  	/*
